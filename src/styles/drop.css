@@ -1,0 +1,112 @@
+/* styling specific for this page */
+.drop-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* styling for the buttons inside of content div */
+.burgers {
+  border: none;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* style specific for drop down items */
+.interfaces-dd {
+  margin: 20px;
+}
+
+/* button to return home */
+#back-button {
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 5%;
+  border: 1px solid #1f1b26;
+  color: #1f1b26;
+  background: #f5f4f4;
+}
+#back-button span {
+  display: inline-block;
+  position: relative;
+  transform: translate(15px);
+  transition: transform 0.3s ease-in-out;
+
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+#back-button span:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: " \f100";
+  opacity: 0;
+  transition: 0.5s;
+}
+#back-button:hover {
+  color: #f5f4f4;
+  background: #1f1b26;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#back-button:hover span {
+  transform: translate(0px);
+}
+#back-button:hover span:after {
+  opacity: 1;
+}
+
+/* div for the showcase button */
+#burger-menu {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+/* actual showcase button */
+#burger-button {
+  position: relative;
+  display: block;
+  width: 185px;
+  padding: 15px 15px;
+  border: 1px solid #1f1b26;
+  color: #f5f4f4;
+  background: #1f1b26;
+}
+#burger-button span {
+  display: inline-block;
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  animation: burgerframes 1s;
+}
+#burger-button:hover {
+  cursor: pointer;
+  color: #1f1b26;
+  background: #f5f4f4;
+  transition: 0.5s;
+}
+
+.dd-menu-content {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  width: 153px;
+  padding: 15px 15px;
+  border: 1px solid #1f1b26;
+  color: #1f1b26;
+  background: #f5f4f4;
+}
+.show {
+  display: block;
+}
+.dd-items {
+  margin: 15px;
+}
+.dd-items:hover {
+  cursor: pointer;
+  background: #1f1b26;
+  color: #f5f4f4;
+}

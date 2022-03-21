@@ -1,0 +1,171 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* main content div */
+.content-home {
+  width: 700px;
+  height: 500px;
+}
+.content-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* divs for the buttons */
+.interfaces {
+  margin: 5px;
+}
+/* selects all the buttons */
+.home-buttons {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5%;
+  padding: 20px 20px;
+  width: 200px;
+  cursor: pointer;
+}
+.home-buttons {
+  background: #1f1b26;
+  color: #f5f4f4;
+  border: none;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 12px 43px 13px rgba(46, 46, 46, 0.6);
+  box-shadow: 0px 12px 43px 13px rgba(46, 46, 46, 0.6);
+}
+.home-buttons:hover {
+  background: #f5f4f4;
+  color: #1f1b26;
+  border: 1px solid #1f1b26;
+  -webkit-box-shadow: 0px 12px 43px 13px rgba(46, 46, 46, 0.11);
+  box-shadow: 0px 12px 43px 13px rgba(46, 46, 46, 0.11);
+}
+
+/* drop-down specific button */
+/* we target the span inside of it */
+#dd-button span {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+/* drop-down button, we add content after it */
+#dd-button span:after {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transition: transform 300ms ease-in;
+  content: " \f13a";
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  transform: rotate(-90deg);
+}
+/* when we hover over the button */
+/* add space inside */
+#dd-button:hover span {
+  opacity: 1;
+  padding-right: 25px;
+}
+/* when drop-down div is hovered */
+/* take the child and animate it */
+#dd-button:hover span:after {
+  opacity: 1;
+  top: 3px;
+  right: 0;
+  transform: rotate(0deg);
+}
+
+/* mobile button specifically */
+#mm-button span {
+  display: inline-block;
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: 0.5s;
+}
+#mm-button span:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  content: " \f3ce";
+  transition: 0.5s;
+}
+#mm-button:hover span {
+  animation: mmframes 0.5s ease-in-out 0s 1 normal forwards running;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+/* img button */
+#img-button span {
+  display: inline-block;
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: 0.5s;
+}
+#img-button span:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  content: " \f302";
+  transition: 0.5s;
+}
+#img-button:hover span {
+  padding-left: 25px;
+  left: 0;
+  animation: imgframes 2s ease-out 0s infinite normal forwards running;
+  transition: 0.5s;
+}
+
+/* animations */
+@keyframes mmframes {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  75% {
+    top: -5px;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes imgframes {
+  0% {
+    opacity: 0;
+    left: -70px;
+  }
+  /* 40% {
+    opacity: 0.5;
+  } */
+  50% {
+    opacity: 1;
+    left: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 70px;
+  }
+}

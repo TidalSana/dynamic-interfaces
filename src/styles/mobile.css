@@ -1,0 +1,152 @@
+/* mobile content page */
+.mobile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+}
+
+/* intial mm button */
+#mm-button-page {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.icon-format-open {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-format-close {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.mm-button-mobile {
+  padding: 15px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #1f1b26;
+  color: #f5f4f4;
+  font-size: 25px;
+  transition: 0.5s;
+}
+.mm-button-mobile:hover {
+  color: #1f1b26;
+  background: #e0dede;
+}
+
+/* animation to open the div */
+.open {
+  animation: mobileframes 0.5s ease-in-out 0s 1 normal forwards running;
+  transition: 0.5s;
+}
+.close {
+  animation: afterframes 0.5s ease-in-out 0s 1 normal forwards running;
+  transition: 0.5s;
+}
+
+/* spinning animation for icons */
+.plus-icon {
+  transform: rotate(0deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.mm-forwards {
+  animation: spinframes 0.5s ease-out 0s 1 normal forwards running;
+  transition: 0.5s;
+}
+.mm-backwards {
+  animation: backwardframes 0.5s ease-in 0s 1 normal forwards running;
+  transition: 0.5s;
+}
+
+/* misc icons */
+.misc {
+  display: none;
+  position: relative;
+  transition: 0.5s;
+}
+.misc:hover {
+  cursor: pointer;
+}
+.invisible {
+  transition: 0.5s;
+  animation: hideframes 0.5s ease-out 0s 1 normal forwards running;
+}
+.visible {
+  animation: spinframesmisc 0.5s ease-in-out 0s 1 normal forwards running;
+  transition: 0.5s;
+  display: block;
+}
+
+/* animations */
+@keyframes mobileframes {
+  0% {
+    width: 80px;
+    border-radius: 50%;
+  }
+  100% {
+    width: 500px;
+    border-radius: 45px;
+  }
+}
+@keyframes afterframes {
+  0% {
+    width: 500px;
+    border-radius: 45px;
+  }
+  100% {
+    width: 80px;
+    border-radius: 50%;
+  }
+}
+@keyframes spinframes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes backwardframes {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spinframesmisc {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  33% {
+    opacity: 0.3;
+    transform: rotate(360deg);
+  }
+  66% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes hideframes {
+  from {
+    transform: rotate(360deg);
+    display: block;
+    opacity: 1;
+  }
+  to {
+    transform: rotate(0deg);
+    display: none;
+    opacity: 0;
+  }
+}

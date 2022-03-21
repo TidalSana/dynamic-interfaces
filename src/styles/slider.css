@@ -1,0 +1,67 @@
+/* styling for content image page */
+.image-page {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  gap: 40%;
+}
+
+/* overall container for the image section */
+.containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* arrow buttons  */
+.directions {
+  margin: 5px;
+  padding: 15px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #1f1b26;
+  color: #f5f4f4;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.directions:hover {
+  color: #1f1b26;
+  background: #e0dede;
+  cursor: pointer;
+}
+
+/* image that is shown */
+.frame {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3%;
+  width: 635px;
+  height: 420px;
+}
+
+/* styling for images themselves */
+.slide {
+  display: none;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+  width: 640px;
+}
+.show {
+  display: block;
+}
+#flame {
+  height: 959px;
+}
+#ocean {
+  height: 426px;
+}
+#road {
+  height: 852px;
+}
